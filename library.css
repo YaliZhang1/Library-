@@ -1,0 +1,234 @@
+* {
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #f7f5f3;
+}
+:root {
+  --main-font-color: rgb(69, 69, 69);
+}
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  /* aspect-ratio: 16/9; */
+  background-color: #f7f5f3;
+
+  .pageContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+
+    header {
+      height: 30%;
+      width: 100%;
+      /* background-color: #faebd7; */
+      margin: 0 auto;
+      text-align: center;
+      justify-content: center;
+      .libraryMessage {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-size: 50px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        max-width: 40ch;
+        padding: 48px 48px;
+        text-align: center;
+        justify-items: center;
+        width: 100%;
+        margin: 0 auto;
+        color: #92672f;
+        opacity: 0.8;
+        font-family: math;
+      }
+    }
+    main {
+      flex: 1;
+      padding: 100px;
+      .sorting-buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        margin: 80px 60px;
+        min-width: 2500px;
+
+        .btn {
+          width: 15%;
+          height: 5%;
+          margin: 0 auto;
+          padding: 20px 24px;
+          font-size: 25px;
+          font-weight: 500;
+          border-radius: 8px;
+          background-color: #916732;
+          color: #fff;
+          cursor: pointer;
+          transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+          &:hover {
+            transition: filter 0.1s ease-in-out, transform 0.1s ease-in-out;
+            transform: scale(1.1);
+            filter: brightness(1.5) drop-shadow(0 0 12px rgba(0, 0, 0, 0.5));
+          }
+
+          &:active {
+            transition: filter 0.05s ease-in-out, transform 0.05s ease-in-out;
+            transform: scale(1.05);
+            filter: brightness(2) drop-shadow(0 0 12px rgba(0, 0, 0, 0.5));
+          }
+        }
+      }
+      .btn-show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px auto;
+        height: 80px;
+        width: 250px;
+        font-size: 25px;
+        border-radius: 8px;
+        background-color: #916732;
+        color: #fff;
+        cursor: pointer;
+        transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        &:hover {
+          transition: filter 0.1s ease-in-out, transform 0.1s ease-in-out;
+          transform: scale(1.1);
+          filter: brightness(1.5) drop-shadow(0 0 12px rgba(0, 0, 0, 0.5));
+        }
+
+        &:active {
+          transition: filter 0.05s ease-in-out, transform 0.05s ease-in-out;
+          transform: scale(1.05);
+          filter: brightness(2) drop-shadow(0 0 12px rgba(0, 0, 0, 0.5));
+        }
+      }
+      .bookCardsContainer {
+        background-color: antiquewhite;
+        .booksArea {
+          display: flex;
+          flex-direction: column;
+
+          .categoryTitle {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: antiquewhite;
+            background-color: rgb(172, 110, 27);
+            height: 7rem;
+            text-align: left;
+            align-content: center;
+            padding: 2rem 5rem 2rem 2rem;
+          }
+          .cards {
+            max-width: 2500px;
+
+            margin: 3rem 4.2rem 3rem 3rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 3rem;
+            .card {
+              min-width: 300px;
+              transition: transform 0.3s;
+              &:hover {
+                transform: scale(1.01);
+              }
+              box-shadow: 0 16px 16px rgba(0, 0, 0, 0.125);
+              img {
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+                border-radius: 15px;
+              }
+              .card-title {
+                font-size: 2.8rem;
+                font-weight: 500;
+                margin-bottom: 16px;
+                margin-top: 16px;
+                font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+                  sans-serif;
+                color: #916732;
+              }
+              div {
+                ul {
+                  width: 100%;
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  grid-template-rows: 1fr 1fr;
+                  li {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    margin-bottom: 8px;
+                    margin-top: 8px;
+                    color: var(--main-font-color);
+                    align-content: center;
+                    .btn {
+                      background-color: #fff;
+                      color: #fff;
+                      opacity: 0.7;
+                      &:hover {
+                        background-color: #92672f;
+                        color: #fff;
+                        cursor: pointer;
+                        transform: scale(1.02);
+                        transition: transform 0.3s;
+                      }
+                    }
+                  }
+                }
+              }
+              button {
+                margin: 10px;
+                padding: 5px;
+                height: 60px;
+                width: 60px;
+                background-color: #fff;
+                color: #fff;
+                border: none;
+                border-radius: 50px 50px;
+                font-size: 10px;
+                font-weight: 500;
+                opacity: 0.8;
+                &:hover {
+                  background-color: #92672f;
+                  color: #fff;
+                  cursor: pointer;
+                  transform: scale(1.02);
+                  transition: transform 0.3s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    footer {
+      background-color: rgb(172, 110, 27);
+      height: 80px;
+      text-align: center;
+      min-width: 3000px;
+      align-content: center;
+      color: #fff;
+      font-size: 18px;
+
+      /* position: fixed;
+      left: 0;
+      bottom: 0; */
+    }
+  }
+}
